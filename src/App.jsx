@@ -13,7 +13,7 @@ function Stat({ label, value }) {
 
 export default function App() {
   const [input, setInput] = useState("");
-  const [username, setUsername] = useState(""); // the submitted name that triggers the fetch
+  const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -45,7 +45,7 @@ export default function App() {
     }
 
     fetchUser();
-    return () => controller.abort(); // cancel the old request if the name changes
+    return () => controller.abort(); 
   }, [username]);
 
   const handleSubmit = (e) => {
